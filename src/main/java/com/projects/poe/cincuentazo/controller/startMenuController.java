@@ -9,7 +9,13 @@ import javafx.scene.control.Label;
 public class startMenuController {
 
     @FXML
-    private ComboBox<?> numberOfPlayersComboBox;
+    private ComboBox<Integer> numberOfPlayersComboBox;
+
+
+    @FXML
+    public void initialize() {
+        numberOfPlayersComboBox.getItems().addAll(1, 2, 3);
+    }
 
     @FXML
     private Button playButton;

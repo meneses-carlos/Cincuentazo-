@@ -5,11 +5,11 @@
 <?import javafx.scene.layout.Pane?>
 
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.poe.cincuentazo.controller.mainGameController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1050.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.poe.cincuentazo.controller.mainGameController">
    <children>
-      <ImageView fx:id="card" fitHeight="150.0" fitWidth="113.0" layoutX="354.0" layoutY="102.0" onMouseClicked="#Animacion" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="1057.0" fitWidth="1446.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@8BitDeck23.png" />
+            <Image url="@background/bg.jpeg" />
          </image>
       </ImageView>
    </children>
