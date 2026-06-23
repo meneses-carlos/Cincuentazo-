@@ -11,7 +11,7 @@ public class mainGame extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(mainGame.class.getResource("mainGameView.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1440, 1050);
+        Scene scene = new Scene(fxmlLoader.load(), 1536, 1024);
         stage.setTitle("50tazo");
         stage.setScene(scene);
         stage.setResizable(false);
