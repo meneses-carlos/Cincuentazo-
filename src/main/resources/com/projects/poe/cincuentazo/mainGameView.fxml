@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1536.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.poe.cincuentazo.controller.mainGameController">
+   <children>
+      <ImageView pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@background/bg.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="953.0" fitWidth="1348.0" layoutX="65.0" layoutY="74.0" preserveRatio="true">
+         <image>
+            <Image url="@background/table.png" />
+         </image>
+         <effect>
+            <DropShadow height="10.0" radius="4.5" width="10.0" />
+         </effect>
+      </ImageView>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#0000002b" height="240.0" layoutX="403.0" layoutY="742.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="717.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0000004a" height="317.0" layoutX="19.0" layoutY="710.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="277.0" />
+      <ImageView fitHeight="232.0" fitWidth="178.0" layoutX="412.0" layoutY="748.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cardImages/front/1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="232.0" fitWidth="178.0" layoutX="587.0" layoutY="748.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cardImages/front/51.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="232.0" fitWidth="178.0" layoutX="762.0" layoutY="748.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cardImages/front/35.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="232.0" fitWidth="178.0" layoutX="937.0" layoutY="748.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cardImages/front/15.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="212.0" fitWidth="150.0" layoutX="77.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true" rotate="70.7">
+         <image>
+            <Image url="@cardImages/back/back2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="212.0" fitWidth="150.0" layoutX="100.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true" rotate="81.4">
+         <image>
+            <Image url="@cardImages/back/back2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="212.0" fitWidth="150.0" layoutX="86.0" layoutY="412.0" pickOnBounds="true" preserveRatio="true" rotate="96.0">
+         <image>
+            <Image url="@cardImages/back/back2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="212.0" fitWidth="150.0" layoutX="77.0" layoutY="479.0" pickOnBounds="true" preserveRatio="true" rotate="-68.4">
+         <image>
+            <Image url="@cardImages/back/back2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="212.0" fitWidth="150.0" layoutX="1300.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true" rotate="-70.7">
+         <image>
+            <Image url="@cardImages/back/back3.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="212.0" fitWidth="150.0" layoutX="1278.0" layoutY="373.0" pickOnBounds="true" preserveRatio="true" rotate="-81.4">
+         <image>
+            <Image url="@cardImages/back/back3.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="212.0" fitWidth="150.0" layoutX="1287.0" layoutY="424.0" pickOnBounds="true" preserveRatio="true" rotate="-96.0">
+         <image>
+            <Image url="@cardImages/back/back3.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="212.0" fitWidth="150.0" layoutX="1300.0" layoutY="479.0" pickOnBounds="true" preserveRatio="true" rotate="68.4">
+         <image>
+            <Image url="@cardImages/back/back3.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="212.0" fitWidth="150.0" layoutX="812.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" rotate="-19.3">
+         <image>
+            <Image url="@cardImages/back/back4.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="212.0" fitWidth="150.0" layoutX="725.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" rotate="-8.6">
+         <image>
+            <Image url="@cardImages/back/back4.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="212.0" fitWidth="150.0" layoutX="627.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" rotate="6.0">
+         <image>
+            <Image url="@cardImages/back/back4.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="212.0" fitWidth="150.0" layoutX="581.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" rotate="201.0">
+         <image>
+            <Image url="@cardImages/back/back4.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="305.0" fitWidth="238.0" layoutX="550.0" layoutY="337.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cardImages/front/51.png" />
+         </image>
+         <effect>
+            <DropShadow height="20.0" offsetY="2.0" radius="9.5" width="20.0" />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="286.0" fitWidth="220.0" layoutX="53.0" layoutY="725.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cardImages/back/back1.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#333f3f" height="170.0" layoutX="841.0" layoutY="401.0" stroke="#db5f54" strokeType="INSIDE" strokeWidth="0.0" width="191.0">
+         <effect>
+            <DropShadow height="5.0" offsetY="2.0" radius="2.0" width="5.0" />
+         </effect></Rectangle>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#4f6367" height="83.0" layoutX="858.0" layoutY="471.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="159.0">
+         <effect>
+            <DropShadow height="5.0" offsetY="2.0" radius="2.0" width="5.0" />
+         </effect></Rectangle>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="830.0" layoutY="411.0" prefHeight="49.0" prefWidth="215.0" styleClass="text" stylesheets="@style.css" text="Total" textAlignment="CENTER" textFill="WHITE">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" height="5.0" offsetY="2.0" radius="2.0" width="5.0" />
+         </effect>
+         <font>
+            <Font size="52.0" />
+         </font>
+      </Label>
+      <Label fx:id="total" alignment="CENTER" contentDisplay="CENTER" layoutX="889.0" layoutY="471.0" prefHeight="83.0" prefWidth="101.0" styleClass="text" stylesheets="@style.css" text="00" textFill="WHITE">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" height="10.0" offsetY="2.0" radius="4.5" width="10.0" />
+         </effect>
+         <font>
+            <Font size="77.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

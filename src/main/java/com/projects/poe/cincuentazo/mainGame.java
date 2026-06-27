@@ -7,13 +7,16 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class mainGame extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        FXMLLoader fxmlLoader = new FXMLLoader(mainGame.class.getResource("mainGameView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 1536, 1024);
+        stage.setTitle("50tazo");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
+
+
     }
 }

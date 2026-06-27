@@ -1,0 +1,9 @@
+
+@font-face {
+    font-family: "VCR OSD Mono";
+    src:url("font/customfont.ttf");
+}
+
+.text {
+    -fx-font-family: "VCR OSD Mono";
+}
