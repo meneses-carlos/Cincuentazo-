@@ -6,4 +6,83 @@
 
 .text {
     -fx-font-family: "VCR OSD Mono";
+    }
+
+.combo-box {
+    -fx-font-family: "VCR OSD Mono";
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-background-color: #dbbc54;
+    -fx-font-size: 25;
+
+
+    }
+
+.combo-box:hover {
+    -fx-cursor: hand;
 }
+
+.combo-box:pressed {
+    -fx-font-family: "VCR OSD Mono";
+    -fx-text-fill: #000000;
+    -fx-prompt-text-fill: #000000;
+    -fx-background-radius: 10;
+    -fx-cursor: closed_hand;
+    -fx-translate-y: 1px;
+}
+
+
+.combo-box .list-view {
+    -fx-font-family: "VCR OSD Mono";
+    -fx-text-fill: #000000;
+    -fx-prompt-text-fill: #000000;
+    -fx-background-radius: 10;
+    -fx-background-color: #dbbc54;
+
+}
+
+
+.combo-box .list-cell {
+    -fx-font-family: "VCR OSD Mono";
+    -fx-text-fill: #000000;
+    -fx-prompt-text-fill: #000000;
+    -fx-background-radius: 10;
+    -fx-background-color: #dbbc54;
+
+}
+
+
+.button {
+    -fx-font-family: "VCR OSD Mono";
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-background-color: #54a3db;
+    -fx-cursor: hand;
+    -fx-font-size: 37;
+
+
+    }
+
+.button:hover {
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-background-color: #54a3db;
+    -fx-cursor: hand;
+    -fx-font-size: 37;
+
+    }
+
+.button:pressed {
+    -fx-translate-y: 1px;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-background-color: #4281aa;
+    -fx-cursor: closed_hand;
+    -fx-font-size: 37;
+}
+
+
+
+
+
