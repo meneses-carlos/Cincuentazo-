@@ -2,13 +2,27 @@ package com.projects.poe.cincuentazo.controller;
 
 public class MainGameController {
 
-    //Initialize UI components
+    //========================================================>GAME LIFE CYCLE METHODS
+    //Initialize game components
     public void initialize() {
 
     }
 
-    //Set up a new game 
+    //Starta new game 
     public void startGame() {
+
+    }
+
+    //End the current game
+    public void finishGame() {
+
+    }
+    
+
+
+    //=========================================================>PLAYER ACTION METHODS
+    //Habdle the selection of a card by the player
+    public void selectCard() {
 
     }
 
@@ -22,36 +36,53 @@ public class MainGameController {
 
     }
 
-    //Process the current turn
-    public void processTurn() {
 
-    }
 
+    //=========================================================>AI METHODS
     //Execute an AI player's turn
     public void processMachineTurn() {
 
     }
 
+
+
+    //=========================================================>TURN MANAGEMENT METHODS
     //Move to the next player
     public void nextTurn() {
 
     }
 
+
+
+    //=========================================================>UI UPDATE METHODS
     //Refresh the interface
     public void updateGameView() {
 
     }
 
-    //Refresh the player's hand
+    //Update the player's hand in the UI
     public void updatePlayerHand() {
-
     }
 
-    //Refresh the table information
-    public void updateTable() {
-
+    //Update the current card in the UI
+    public void updateCurrentCard() {
     }
 
+    //Update the total points in the UI
+    public void updateTotal() {
+    }
+
+    //Update the active players in the UI
+    public void updatePlayers() {
+    }
+
+    //Update the turn indicator in the UI
+    public void updateTurnIndicator() {
+    }
+
+
+
+    //=========================================================>GAME STATE METHODS
     //Check if a player can continue
     public void checkPlayerStatus() {
 
@@ -67,11 +98,9 @@ public class MainGameController {
 
     }
 
-    //End the current game
-    public void finishGame() {
 
-    }
-
+    
+    //=========================================================>END GAME METHODS
     //Show the winner of the game
     public void showWinner() {
 
