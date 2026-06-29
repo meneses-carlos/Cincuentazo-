@@ -38,7 +38,7 @@
             <DropShadow height="5.0" offsetY="2.0" radius="2.0" width="5.0" />
          </effect>
       </ComboBox>
-      <Button fx:id="playButton" layoutX="278.0" layoutY="404.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="162.0" stylesheets="@style.css" text="Jugar" textFill="#dfdfdf">
+      <Button fx:id="playButton"  onAction="#startGame" layoutX="278.0" layoutY="404.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="162.0" stylesheets="@style.css" text="Jugar" textFill="#dfdfdf">
          <font>
             <Font size="37.0" />
          </font>
