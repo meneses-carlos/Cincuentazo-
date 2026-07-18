@@ -7,6 +7,14 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Entry point of the Cincuentazo application.
+ * Loads the start menu as the initial scene.
+ *
+ * @author Jorge Navia
+ * @version 1.1
+ * @since 1.0
+ */
 public class MainGame extends Application {
     @Override
     public void start(Stage stage) throws IOException {
@@ -16,10 +24,5 @@ public class MainGame extends Application {
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
-
-        // no esta hecha la transicion del inicio al principal si quieren verlos cambien el get resourse por el nombre del que quiere ver
-        //ajusten el ancho y largo
-        //main game 1048x1024
-        //start menu 700x600
     }
 }
