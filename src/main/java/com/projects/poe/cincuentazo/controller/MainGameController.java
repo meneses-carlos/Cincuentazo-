@@ -370,8 +370,11 @@ public class MainGameController {
     //=========================================================>TURN MANAGEMENT METHODS
     /**
      * Advances the game to the next active player's turn.
-     * If the next player is controlled by the AI,
-     * its turn is executed automatically.
+     * <p>
+     * If the next player is controlled by the AI, its turn is executed
+     * automatically. If the next player is human and has no playable card,
+     * they are eliminated immediately so the turn does not get stuck waiting
+     * for a move that can never be made.
      */
     public void nextTurn() {
 
@@ -384,6 +387,24 @@ public class MainGameController {
         if (currentPlayer.isMachine()) {
 
             processMachineTurn();
+
+            return;
+
+        }
+
+        boolean canPlay = gameState.getRules().hasPlayableCard(
+                currentPlayer.getHand(),
+                gameState.getTable().getAccumulated()
+        );
+
+        if (!canPlay) {
+
+            eliminatePlayer();
+            checkWinner();
+
+            if (!gameState.isGameOver()) {
+                nextTurn();
+            }
 
         }
 
