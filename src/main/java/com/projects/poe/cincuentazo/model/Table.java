@@ -88,4 +88,32 @@ public class Table {
         playedCards.clear();
         accumulated = 0;
     }
+
+    //Overload
+    public void placeCard(Card card, int aceValue) {
+
+        playedCards.add(card);
+
+        if (card.getLabel().equals("A")) {
+
+            accumulated += aceValue;
+            return;
+
+        }
+
+        switch (card.getEffect()) {
+
+            case ADD:
+                accumulated += card.getValue();
+                break;
+
+            case SUBTRACT:
+                accumulated -= card.getValue();
+                break;
+
+            case NONE:
+                break;
+        }
+
+    }
 }

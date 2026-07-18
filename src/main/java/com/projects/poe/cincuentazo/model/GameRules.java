@@ -86,4 +86,27 @@ public class GameRules {
             );
         }
     }
+
+    //Overload
+    public int calculateNewAccumulated(Card card, int accumulated, int aceValue) {
+        if (card.getLabel().equals("A")) {
+            return accumulated + aceValue;
+        }
+        return calculateNewAccumulated(card, accumulated);
+    }
+
+    public boolean isCardPlayable(Card card, int accumulated, int aceValue){
+        return calculateNewAccumulated(card, accumulated, aceValue) <= LIMIT;
+    }
+
+    public void validatePlay(Card card, int accumulated, int aceValue) throws InvalidCardException {
+        if (!isCardPlayable(card, accumulated, aceValue)) {
+            throw new InvalidCardException(
+                    "La carta '" + card + "' no es jugable. " +
+                            "Acumulado actual: " + accumulated +
+                            ", nuevo acumulado sería: " + calculateNewAccumulated(card, accumulated, aceValue) +
+                            ", límite: " + LIMIT + "."
+            );
+        }
+    }
 }
