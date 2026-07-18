@@ -62,62 +62,62 @@
             <Cursor fx:constant="OPEN_HAND" />
          </cursor>
       </ImageView>
-      <ImageView fitHeight="212.0" fitWidth="150.0" layoutX="77.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true" rotate="70.7">
+      <ImageView fx:id="bot1Card1" fitHeight="212.0" fitWidth="150.0" layoutX="77.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true" rotate="70.7">
          <image>
             <Image url="@cardImages/back/back2.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="212.0" fitWidth="150.0" layoutX="100.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true" rotate="81.4">
+      <ImageView fx:id="bot1Card2" fitHeight="212.0" fitWidth="150.0" layoutX="100.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true" rotate="81.4">
          <image>
             <Image url="@cardImages/back/back2.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="212.0" fitWidth="150.0" layoutX="100.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true" rotate="96.0">
+      <ImageView fx:id="bot1Card3" fitHeight="212.0" fitWidth="150.0" layoutX="100.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true" rotate="96.0">
          <image>
             <Image url="@cardImages/back/back2.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="212.0" fitWidth="150.0" layoutX="77.0" layoutY="479.0" pickOnBounds="true" preserveRatio="true" rotate="-68.4">
+      <ImageView fx:id="bot1Card4" fitHeight="212.0" fitWidth="150.0" layoutX="77.0" layoutY="479.0" pickOnBounds="true" preserveRatio="true" rotate="-68.4">
          <image>
             <Image url="@cardImages/back/back2.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="212.0" fitWidth="150.0" layoutX="1256.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true" rotate="-70.7">
+      <ImageView fx:id="bot3Card1" fitHeight="212.0" fitWidth="150.0" layoutX="1256.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true" rotate="-70.7">
          <image>
             <Image url="@cardImages/back/back3.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="212.0" fitWidth="150.0" layoutX="1229.0" layoutY="373.0" pickOnBounds="true" preserveRatio="true" rotate="-81.4">
+      <ImageView fx:id="bot3Card2" fitHeight="212.0" fitWidth="150.0" layoutX="1229.0" layoutY="373.0" pickOnBounds="true" preserveRatio="true" rotate="-81.4">
          <image>
             <Image url="@cardImages/back/back3.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="212.0" fitWidth="150.0" layoutX="1231.0" layoutY="419.0" pickOnBounds="true" preserveRatio="true" rotate="-96.0">
+      <ImageView fx:id="bot3Card3" fitHeight="212.0" fitWidth="150.0" layoutX="1231.0" layoutY="419.0" pickOnBounds="true" preserveRatio="true" rotate="-96.0">
          <image>
             <Image url="@cardImages/back/back3.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="212.0" fitWidth="150.0" layoutX="1244.0" layoutY="479.0" pickOnBounds="true" preserveRatio="true" rotate="68.4">
+      <ImageView fx:id="bot3Card4" fitHeight="212.0" fitWidth="150.0" layoutX="1244.0" layoutY="479.0" pickOnBounds="true" preserveRatio="true" rotate="68.4">
          <image>
             <Image url="@cardImages/back/back3.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="212.0" fitWidth="150.0" layoutX="811.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" rotate="-19.3">
+      <ImageView fx:id="bot2Card1" fitHeight="212.0" fitWidth="150.0" layoutX="811.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" rotate="-19.3">
          <image>
             <Image url="@cardImages/back/back4.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="212.0" fitWidth="150.0" layoutX="722.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" rotate="-8.6">
+      <ImageView fx:id="bot2Card2" fitHeight="212.0" fitWidth="150.0" layoutX="722.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" rotate="-8.6">
          <image>
             <Image url="@cardImages/back/back4.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="212.0" fitWidth="150.0" layoutX="613.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" rotate="6.0">
+      <ImageView fx:id="bot2Card3" fitHeight="212.0" fitWidth="150.0" layoutX="613.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" rotate="6.0">
          <image>
             <Image url="@cardImages/back/back4.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="212.0" fitWidth="150.0" layoutX="557.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" rotate="201.0">
+      <ImageView fx:id="bot2Card4" fitHeight="212.0" fitWidth="150.0" layoutX="557.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" rotate="201.0">
          <image>
             <Image url="@cardImages/back/back4.png" />
          </image>
@@ -170,7 +170,7 @@
             <DropShadow height="5.0" offsetY="2.0" radius="2.0" width="5.0" />
          </effect>
       </Rectangle>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="96.0" layoutY="720.0" prefHeight="56.0" prefWidth="131.0" styleClass="text" stylesheets="@style.css" text="Mazo" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="deckCount" alignment="CENTER" contentDisplay="CENTER" layoutX="96.0" layoutY="720.0" prefHeight="56.0" prefWidth="131.0" styleClass="text" stylesheets="@style.css" text="Mazo" textAlignment="CENTER" textFill="WHITE">
          <effect>
             <DropShadow blurType="ONE_PASS_BOX" height="5.0" offsetY="2.0" radius="2.0" width="5.0" />
          </effect>
@@ -183,7 +183,7 @@
             <DropShadow height="5.0" offsetY="2.0" radius="2.0" width="5.0" />
          </effect>
       </Rectangle>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="37.0" layoutY="228.0" prefHeight="47.0" prefWidth="200.0" styleClass="text" stylesheets="@style.css" text="Bot 1" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="bot1NameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="37.0" layoutY="228.0" prefHeight="47.0" prefWidth="200.0" styleClass="text" stylesheets="@style.css" text="Bot 1" textAlignment="CENTER" textFill="WHITE">
          <effect>
             <DropShadow blurType="ONE_PASS_BOX" height="5.0" offsetY="2.0" radius="2.0" width="5.0" />
          </effect>
@@ -201,7 +201,7 @@
             <DropShadow height="5.0" offsetY="2.0" radius="2.0" width="5.0" />
          </effect>
       </Rectangle>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1257.0" layoutY="228.0" prefHeight="47.0" prefWidth="124.0" styleClass="text" stylesheets="@style.css" text="Bot 3" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="bot3NameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="1257.0" layoutY="228.0" prefHeight="47.0" prefWidth="124.0" styleClass="text" stylesheets="@style.css" text="Bot 3" textAlignment="CENTER" textFill="WHITE">
          <effect>
             <DropShadow blurType="ONE_PASS_BOX" height="5.0" offsetY="2.0" radius="2.0" width="5.0" />
          </effect>
@@ -222,7 +222,7 @@
             <Font size="39.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="700.0" layoutY="24.0" prefHeight="47.0" prefWidth="124.0" styleClass="text" stylesheets="@style.css" text="Bot 2" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="bot2NameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="700.0" layoutY="24.0" prefHeight="47.0" prefWidth="124.0" styleClass="text" stylesheets="@style.css" text="Bot 2" textAlignment="CENTER" textFill="WHITE">
          <effect>
             <DropShadow blurType="ONE_PASS_BOX" height="5.0" offsetY="2.0" radius="2.0" width="5.0" />
          </effect>

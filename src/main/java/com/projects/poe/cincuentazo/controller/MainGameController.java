@@ -56,6 +56,27 @@ public class MainGameController {
     @FXML
     private ImageView turnIndicator;
 
+    @FXML
+    private Label deckCount;
+
+    @FXML
+    private Label bot1NameLabel;
+
+    @FXML
+    private Label bot2NameLabel;
+
+    @FXML
+    private Label bot3NameLabel;
+
+    @FXML
+    private ImageView bot1Card1, bot1Card2, bot1Card3, bot1Card4;
+
+    @FXML
+    private ImageView bot2Card1, bot2Card2, bot2Card3, bot2Card4;
+
+    @FXML
+    private ImageView bot3Card1, bot3Card2, bot3Card3, bot3Card4;
+
 
     //========================================================>GAME LIFE CYCLE METHODS
     /**
@@ -473,8 +494,47 @@ public class MainGameController {
 
     /**
      * Updates the visual representation of the active players.
+     * <p>
+     * Shows the number of face-down cards that matches each bot's real
+     * hand size, hides bot slots that are not part of the current game,
+     * and refreshes the remaining card count shown on the deck.
      */
     public void updatePlayers() {
+
+        deckCount.setText("Mazo (" + gameState.getDeck().getRemainingCount() + ")");
+
+        Label[] botNameLabels = {bot1NameLabel, bot2NameLabel, bot3NameLabel};
+
+        ImageView[][] botCards = {
+                {bot1Card1, bot1Card2, bot1Card3, bot1Card4},
+                {bot2Card1, bot2Card2, bot2Card3, bot2Card4},
+                {bot3Card1, bot3Card2, bot3Card3, bot3Card4}
+        };
+
+        List<Player> players = gameState.getPlayers();
+
+        for (int botSlot = 0; botSlot < botNameLabels.length; botSlot++) {
+
+            int playerIndex = botSlot + 1;
+
+            boolean botInGame = playerIndex < players.size();
+
+            botNameLabels[botSlot].setVisible(botInGame);
+
+            int cardsInHand = 0;
+
+            if (botInGame && players.get(playerIndex).isActive()) {
+                cardsInHand = players.get(playerIndex).getHand().size();
+            }
+
+            for (int cardSlot = 0; cardSlot < botCards[botSlot].length; cardSlot++) {
+
+                botCards[botSlot][cardSlot].setVisible(cardSlot < cardsInHand);
+
+            }
+
+        }
+
     }
 
     /**
