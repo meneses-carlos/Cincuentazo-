@@ -10,12 +10,11 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <Pane prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.poe.cincuentazo.controller.StartMenuController">
    <children>
-      <ImageView fitHeight="600.0" fitWidth="733.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="600.0" fitWidth="901.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@background/bg2.jpg" />
+            <Image url="@background/bg.jpg" />
          </image>
       </ImageView>
       <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#333f3f" height="550.0" layoutX="129.0" layoutY="25.0" stroke="#db5f54" strokeType="INSIDE" strokeWidth="0.0" width="460.0">
@@ -38,7 +37,7 @@
             <DropShadow height="5.0" offsetY="2.0" radius="2.0" width="5.0" />
          </effect>
       </ComboBox>
-      <Button fx:id="playButton"  onAction="#startGame" layoutX="278.0" layoutY="404.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="162.0" stylesheets="@style.css" text="Jugar" textFill="#dfdfdf">
+      <Button fx:id="playButton" layoutX="278.0" layoutY="404.0" mnemonicParsing="false" onAction="#startGame" prefHeight="54.0" prefWidth="162.0" stylesheets="@style.css" text="Jugar" textFill="#dfdfdf">
          <font>
             <Font size="37.0" />
          </font>
@@ -46,9 +45,9 @@
             <DropShadow height="5.0" offsetY="2.0" radius="2.0" width="5.0" />
          </effect>
       </Button>
-      <Label fx:id="warningLabel" layoutX="235.0" layoutY="492.0" styleClass="text" stylesheets="@style.css" text="warning label" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="warningLabel" layoutX="200.0" layoutY="499.0" styleClass="text" stylesheets="@style.css" text="warning label" textAlignment="CENTER" textFill="WHITE">
          <font>
-            <Font size="32.0" />
+            <Font size="24.0" />
          </font>
          <effect>
             <DropShadow height="5.0" offsetY="2.0" radius="2.0" width="5.0" />

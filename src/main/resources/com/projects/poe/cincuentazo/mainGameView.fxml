@@ -170,12 +170,12 @@
             <DropShadow height="5.0" offsetY="2.0" radius="2.0" width="5.0" />
          </effect>
       </Rectangle>
-      <Label fx:id="deckCount" alignment="CENTER" contentDisplay="CENTER" layoutX="96.0" layoutY="720.0" prefHeight="56.0" prefWidth="131.0" styleClass="text" stylesheets="@style.css" text="Mazo" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="deckCount" alignment="CENTER" contentDisplay="CENTER" layoutX="55.0" layoutY="720.0" prefHeight="56.0" prefWidth="211.0" styleClass="text" stylesheets="@style.css" text="Mazo" textAlignment="CENTER" textFill="WHITE">
          <effect>
             <DropShadow blurType="ONE_PASS_BOX" height="5.0" offsetY="2.0" radius="2.0" width="5.0" />
          </effect>
          <font>
-            <Font size="52.0" />
+            <Font size="39.0" />
          </font>
       </Label>
       <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#504f66" height="55.0" layoutX="52.0" layoutY="224.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="170.0">
@@ -241,10 +241,5 @@
             <DropShadow height="10.0" offsetY="1.0" radius="4.5" width="10.0" />
          </effect>
       </ImageView>
-      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#333f3f" height="240.0" layoutX="1143.0" layoutY="742.0" stroke="#db5f54" strokeType="INSIDE" strokeWidth="0.0" width="323.0">
-         <effect>
-            <DropShadow height="5.0" offsetY="2.0" radius="2.0" width="5.0" />
-         </effect>
-      </Rectangle>
    </children>
 </Pane>
