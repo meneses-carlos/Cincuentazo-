@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1498.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.poe.cincuentazo.controller.MainGameController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1024.0" prefWidth="1498.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projects.poe.cincuentazo.controller.MainGameController">
    <children>
       <ImageView pickOnBounds="true" preserveRatio="true">
          <image>
@@ -29,7 +30,7 @@
          </effect>
       </Rectangle>
       <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#00000059" height="240.0" layoutX="403.0" layoutY="742.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="717.0" />
-      <ImageView fitHeight="232.0" fitWidth="178.0" layoutX="412.0" layoutY="748.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="playerCard1" fitHeight="232.0" fitWidth="178.0" layoutX="412.0" layoutY="748.0" onMouseClicked="#playCard" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@cardImages/front/1.png" />
          </image>
@@ -37,7 +38,7 @@
             <Cursor fx:constant="OPEN_HAND" />
          </cursor>
       </ImageView>
-      <ImageView fitHeight="232.0" fitWidth="178.0" layoutX="587.0" layoutY="748.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="playerCard2" fitHeight="232.0" fitWidth="178.0" layoutX="587.0" layoutY="748.0" onMouseClicked="#playCard" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@cardImages/front/51.png" />
          </image>
@@ -45,7 +46,7 @@
             <Cursor fx:constant="OPEN_HAND" />
          </cursor>
       </ImageView>
-      <ImageView fitHeight="232.0" fitWidth="178.0" layoutX="762.0" layoutY="748.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="playerCard3" fitHeight="232.0" fitWidth="178.0" layoutX="762.0" layoutY="748.0" onMouseClicked="#playCard" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@cardImages/front/35.png" />
          </image>
@@ -53,7 +54,7 @@
             <Cursor fx:constant="OPEN_HAND" />
          </cursor>
       </ImageView>
-      <ImageView fitHeight="232.0" fitWidth="178.0" layoutX="937.0" layoutY="748.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="playerCard4" fitHeight="232.0" fitWidth="178.0" layoutX="937.0" layoutY="748.0" onMouseClicked="#playCard" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@cardImages/front/15.png" />
          </image>
@@ -121,7 +122,7 @@
             <Image url="@cardImages/back/back4.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="305.0" fitWidth="238.0" layoutX="550.0" layoutY="337.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="currentCard" fitHeight="305.0" fitWidth="238.0" layoutX="550.0" layoutY="337.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@cardImages/front/51.png" />
          </image>
