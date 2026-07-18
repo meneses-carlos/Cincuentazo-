@@ -61,6 +61,8 @@ public class StartMenuController {
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/projects/poe/cincuentazo/mainGameView.fxml"));
         Scene scene = new Scene(loader.load());
+        MainGameController controller = loader.getController();
+        controller.initializeGame(numberOfPlayersComboBox.getValue());
         Stage stage = (Stage) playButton.getScene().getWindow();
         stage.setScene(scene);
         stage.show();

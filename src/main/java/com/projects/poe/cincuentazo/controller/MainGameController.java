@@ -21,6 +21,8 @@ public class MainGameController {
 
     private GameState gameState;
 
+    private int numberOfBots;
+
     @FXML
     private ImageView playerCard1;
 
@@ -50,6 +52,12 @@ public class MainGameController {
 
         gameState = new GameState();
 
+    }
+
+    public void initializeGame(int numberOfBots){
+
+        this.numberOfBots = numberOfBots;
+
         startGame();
 
     }
@@ -58,9 +66,14 @@ public class MainGameController {
     public void startGame() {
 
         gameState.addPlayer(new Player("Player", false));
-        gameState.addPlayer(new Player("Bot 1", true));
-        gameState.addPlayer(new Player("Bot 2", true));
-        gameState.addPlayer(new Player("Bot 3", true));
+
+        for (int i = 1; i <= numberOfBots; i++) {
+
+            gameState.addPlayer(
+                    new Player("Bot " + i, true)
+            );
+
+        }
 
 
         try {
