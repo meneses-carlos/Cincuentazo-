@@ -90,6 +90,17 @@ public class Table {
     }
 
     //Overload
+
+
+    /**
+     * Places a card on the table and updates the accumulated value.
+     * <p>
+     * If the card is an Ace, the accumulated value is updated using
+     * the specified value (1 or 10).
+     *
+     * @param card card to place on the table
+     * @param aceValue value assigned to the Ace (1 or 10)
+     */
     public void placeCard(Card card, int aceValue) {
 
         playedCards.add(card);

@@ -11,12 +11,28 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+
+/**
+ * Controller responsible for managing the start menu of the game.
+ * <p>
+ * It allows the player to select the number of AI opponents,
+ * validates the menu input, and loads the main game scene.
+ *
+ * @author Carlos Meneses
+ * @version 1.0
+ * @since 1.0
+ */
 public class StartMenuController {
 
     @FXML
     private ComboBox<Integer> numberOfPlayersComboBox;
 
-
+    /**
+     * Initializes the start menu components.
+     * <p>
+     * Populates the player selection combo box and hides
+     * the warning message.
+     */
     @FXML
     public void initialize() {
         numberOfPlayersComboBox
@@ -31,10 +47,13 @@ public class StartMenuController {
     @FXML
     private Label warningLabel;
 
-   
 
-
-    // Validate menu input
+    /**
+     * Validates that the user has selected the number of AI players.
+     *
+     * @return {@code true} if a valid selection exists;
+     *         {@code false} otherwise
+     */
     public boolean validateSelection(){
         if(numberOfPlayersComboBox.getValue() == null){
             showWarning("Selecciona para jugar");
@@ -46,7 +65,9 @@ public class StartMenuController {
     }
 
 
-    // Start the game
+    /**
+     * Starts the game if the menu selection is valid.
+     */
     public void startGame() {
 
         if (validateSelection()) {
@@ -54,33 +75,41 @@ public class StartMenuController {
         }
     }
 
-    // Load the game scene
+    /**
+     * Loads the main game view, initializes the game with the
+     * selected number of AI players, and displays the new scene.
+     */
     public void loadGameView() {
 
-    try {
+        try {
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/projects/poe/cincuentazo/mainGameView.fxml"));
-        Scene scene = new Scene(loader.load());
-        MainGameController controller = loader.getController();
-        controller.initializeGame(numberOfPlayersComboBox.getValue());
-        Stage stage = (Stage) playButton.getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/projects/poe/cincuentazo/mainGameView.fxml"));
+            Scene scene = new Scene(loader.load());
+            MainGameController controller = loader.getController();
+            controller.initializeGame(numberOfPlayersComboBox.getValue());
+            Stage stage = (Stage) playButton.getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        }catch (IOException e) {
+
+            e.printStackTrace();
+
+        }
     }
 
-    catch (IOException e) {
-
-        e.printStackTrace();
-    }
-}
-
-    // Display a warning message
+    /**
+     * Displays a warning message in the start menu.
+     *
+     * @param message message to be displayed
+     */
     public void showWarning(String message) {
         warningLabel.setText(message);
         warningLabel.setVisible(true);
     }
 
-    // Hide warning messages
+    /**
+     * Hides the warning message from the start menu.
+     */
     public void hideWarning() {
         warningLabel.setText("");
         warningLabel.setVisible(false);

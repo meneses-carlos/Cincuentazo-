@@ -17,6 +17,18 @@ import javafx.application.Platform;
 import javafx.scene.control.Alert;
 import javafx.fxml.FXML;
 
+
+/**
+ * Controller responsible for managing the main gameplay.
+ * <p>
+ * It coordinates the interaction between the view and the model,
+ * handles player actions, AI turns, game state updates, and
+ * synchronizes the user interface during the match.
+ *
+ * @author Carlos Meneses
+ * @version 1.0
+ * @since 1.0
+ */
 public class MainGameController {
 
     private GameState gameState;
@@ -46,7 +58,10 @@ public class MainGameController {
 
 
     //========================================================>GAME LIFE CYCLE METHODS
-    //Initialize game components
+    /**
+     * Initializes the controller and creates the game state.
+     * The game setup is completed later through {@code initializeGame(int)}.
+     */
     @FXML
     public void initialize() {
 
@@ -54,6 +69,11 @@ public class MainGameController {
 
     }
 
+    /**
+     * Initializes a new game with the selected number of AI players.
+     *
+     * @param numberOfBots number of AI opponents selected by the user
+     */
     public void initializeGame(int numberOfBots){
 
         this.numberOfBots = numberOfBots;
@@ -62,7 +82,11 @@ public class MainGameController {
 
     }
 
-    //Start a new game
+
+    /**
+     * Creates the players, prepares the game, and initializes
+     * the user interface.
+     */
     public void startGame() {
 
         gameState.addPlayer(new Player("Player", false));
@@ -89,7 +113,10 @@ public class MainGameController {
 
     }
 
-    //End the current game
+
+    /**
+     * Marks the current game as finished.
+     */
     public void finishGame() {
 
         gameState.setGameOver(true);
@@ -98,7 +125,14 @@ public class MainGameController {
 
 
     //=========================================================>PLAYER ACTION METHODS
-    //Play the selected card
+    /**
+     * Handles the action of playing a card selected by the human player.
+     * <p>
+     * If the selected card is an Ace, the player chooses whether its value
+     * will be 1 or 10 before validating and playing the card.
+     *
+     * @param event mouse event generated when a card is clicked
+     */
     @FXML
     public void playCard(MouseEvent event) {
 
@@ -194,7 +228,11 @@ public class MainGameController {
 
     }
 
-    //Draw a card from the deck
+    /**
+     * Draws a card from the deck and gives it to the current player.
+     * <p>
+     * If the deck is empty, it is rebuilt before drawing again.
+     */
     public void drawCard() {
 
         try {
@@ -223,7 +261,13 @@ public class MainGameController {
 
 
     //=========================================================>AI METHODS
-    //Execute an AI player's turn
+    /**
+     * Executes the turn of an AI player.
+     * <p>
+     * The AI waits for a random time between two and four seconds,
+     * selects a valid card, plays it, draws a replacement card,
+     * and passes the turn to the next player.
+     */
     public void processMachineTurn() {
 
         new Thread(() -> {
@@ -324,7 +368,11 @@ public class MainGameController {
 
 
     //=========================================================>TURN MANAGEMENT METHODS
-    //Move to the next player
+    /**
+     * Advances the game to the next active player's turn.
+     * If the next player is controlled by the AI,
+     * its turn is executed automatically.
+     */
     public void nextTurn() {
 
         gameState.nextTurn();
@@ -343,7 +391,9 @@ public class MainGameController {
 
 
     //=========================================================>UI UPDATE METHODS
-    //Refresh the interface
+    /**
+     * Refreshes all visual components of the game interface.
+     */
     public void updateGameView() {
 
         updatePlayerHand();
@@ -354,7 +404,9 @@ public class MainGameController {
 
     }
 
-    //Update the player's hand in the UI
+    /**
+     * Updates the human player's hand displayed on the screen.
+     */
     public void updatePlayerHand() {
 
         Player humanPlayer = gameState.getPlayers().get(0);
@@ -376,7 +428,9 @@ public class MainGameController {
 
     }
 
-    //Update the current card in the UI
+    /**
+     * Updates the visible card placed on the table.
+     */
     public void updateCurrentCard() {
 
         currentCard.setImage(
@@ -385,7 +439,9 @@ public class MainGameController {
 
     }
 
-    //Update the total points in the UI
+    /**
+     * Updates the accumulated total shown on the interface.
+     */
     public void updateTotal() {
 
         int accumulated = gameState.getTable().getAccumulated();
@@ -394,11 +450,15 @@ public class MainGameController {
 
     }
 
-    //Update the active players in the UI
+    /**
+     * Updates the visual representation of the active players.
+     */
     public void updatePlayers() {
     }
 
-    //Update the turn indicator in the UI
+    /**
+     * Moves the turn indicator to the current active player.
+     */
     public void updateTurnIndicator() {
 
         Player currentPlayer = gameState.getCurrentPlayer();
@@ -433,7 +493,10 @@ public class MainGameController {
 
 
     //=========================================================>GAME STATE METHODS
-    //Check if a player can continue
+    /**
+     * Verifies whether the current player can continue playing.
+     * If no valid moves remain, the player is eliminated.
+     */
     public void checkPlayerStatus() {
 
         Player currentPlayer = gameState.getCurrentPlayer();
@@ -450,7 +513,10 @@ public class MainGameController {
 
     }
 
-    //Remove player from the game
+    /**
+     * Eliminates the current player from the game and updates
+     * the interface accordingly.
+     */
     public void eliminatePlayer() {
 
         Player currentPlayer = gameState.getCurrentPlayer();
@@ -461,7 +527,10 @@ public class MainGameController {
 
     }
 
-    //Verify if the game has a winner
+    /**
+     * Checks whether only one active player remains.
+     * If so, the game ends and the winner is announced.
+     */
     public void checkWinner() {
 
         List<Player> activePlayers = gameState.getActivePlayers();
@@ -478,7 +547,9 @@ public class MainGameController {
 
 
     //=========================================================>END GAME METHODS
-    //Show the winner of the game
+    /**
+     * Displays the winner of the game and closes the application.
+     */
     public void showWinner() {
 
         Player winner = gameState.getActivePlayers().get(0);
@@ -495,6 +566,12 @@ public class MainGameController {
 
     }
 
+    /**
+     * Loads the image corresponding to the given playing card.
+     *
+     * @param card card whose image will be loaded
+     * @return the image associated with the specified card
+     */
     private Image loadCardImage(Card card) {
 
         int suitOffset = card.getSuit().ordinal() * 13;

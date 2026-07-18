@@ -88,6 +88,17 @@ public class GameRules {
     }
 
     //Overload
+
+
+    /**
+     * Calculates the new accumulated value after playing a card,
+     * allowing a custom value for an Ace.
+     *
+     * @param card card to be played
+     * @param accumulated current accumulated value on the table
+     * @param aceValue value assigned to the Ace (1 or 10)
+     * @return the new accumulated value after applying the card
+     */
     public int calculateNewAccumulated(Card card, int accumulated, int aceValue) {
         if (card.getLabel().equals("A")) {
             return accumulated + aceValue;
@@ -95,10 +106,29 @@ public class GameRules {
         return calculateNewAccumulated(card, accumulated);
     }
 
+    /**
+     * Determines whether a card can be played without exceeding
+     * the game limit, allowing a custom value for an Ace.
+     *
+     * @param card card to evaluate
+     * @param accumulated current accumulated value on the table
+     * @param aceValue value assigned to the Ace (1 or 10)
+     * @return {@code true} if the card can be played;
+     *         {@code false} otherwise
+     */
     public boolean isCardPlayable(Card card, int accumulated, int aceValue){
         return calculateNewAccumulated(card, accumulated, aceValue) <= LIMIT;
     }
 
+    /**
+     * Validates whether a card can be played using the specified
+     * value for an Ace.
+     *
+     * @param card card to validate
+     * @param accumulated current accumulated value on the table
+     * @param aceValue value assigned to the Ace (1 or 10)
+     * @throws InvalidCardException if the play is not valid
+     */
     public void validatePlay(Card card, int accumulated, int aceValue) throws InvalidCardException {
         if (!isCardPlayable(card, accumulated, aceValue)) {
             throw new InvalidCardException(
