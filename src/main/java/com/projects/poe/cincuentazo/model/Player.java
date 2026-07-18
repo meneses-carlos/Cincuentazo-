@@ -1,5 +1,7 @@
 package com.projects.poe.cincuentazo.model;
 
+import com.projects.poe.cincuentazo.model.exceptions.EliminatedPlayerException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -82,8 +84,14 @@ public class Player {
      *
      * @param index position of the card in the hand (0-based)
      * @return played card
+     * @throws EliminatedPlayerException if the player has already been eliminated from the game
      */
     public Card playCard(int index) {
+        if (!active) {
+            throw new EliminatedPlayerException(
+                    "Player '" + name + "' has been eliminated and cannot play a card."
+            );
+        }
         return hand.remove(index);
     }
 
